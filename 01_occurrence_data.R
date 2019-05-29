@@ -11,7 +11,9 @@ library(rgeos)
 
 # data can be downloaded from https://figshare.com/collections/A_high-resolution_pan-European_tree_occurrence_dataset/3288407
 EUForestspecies <- read.csv("EUForestspecies.csv")
+# available from NUTS or Natural Earth (needs pre-processing via union() of countries)
 eu_shp <- readOGR(dsn=paste0(getwd(),"/europe_coastline.shp"))
+# shapefile of adminstrative borders of Germany is available from GADM
 ger_shp <- readOGR(dsn=paste0(getwd(),"/DEU_adm0.shp"))
 
 
